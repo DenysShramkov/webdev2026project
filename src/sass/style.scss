@@ -1,0 +1,19 @@
+@use '/src/sass/libs/modern-normalize.min.css'; /* Method to add for scss, @import for regualr css*/
+@use '/src/sass/libs/grids-min.css';
+@use '/src/sass/libs/grids-responsive-min.css'; 
+@use '/src/sass/libs/fontello.css';
+/* @use '/src/sass/base/variables.scss' as v; a way to add sass variables as v.$variableName */
+/* @use '/src/sass/base/variables.scss' as *; */ /* to not have add file or special name infront of sass variable, if severall files have variables with the same name - it'll cause cinflicts */ 
+/* @use '/Ceramic_soul/src/sass/pxtorem.scss' as *; */ /* based on sass math auto calculation for rem, it'll look like rem(16) */
+@use '/src/sass/base/basic.scss';
+
+@use '/src/sass/blocks/header.scss';
+
+@use '/src/sass/ui/titles.scss';
+@use '/src/sass/ui/buttons.scss';
+
+@use '/src/sass/blocks/promo.scss';
+@use '/src/sass/blocks/activities.scss';
+@use '/src/sass/blocks/getintouch.scss';
+
+

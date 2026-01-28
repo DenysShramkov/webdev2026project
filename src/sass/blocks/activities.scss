@@ -1,0 +1,75 @@
+@use '/src/sass/base/variables.scss' as *;
+
+.activities {
+	padding-top: 60px;
+	&__wrapper {
+		margin-top: 20px;
+		row-gap: 40px
+	}
+	&__img {
+		margin-top: 40px;
+		width: 100%;
+		box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25);
+	}
+	&__text {
+		color: $dark;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+		margin-block-start: 20px;
+		&_ceramic {
+			color: $ceramic;
+			font-weight: 500;
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.activities {
+		.container {
+			padding: 0 95px;
+		}
+		&__wrapper {
+			margin-top: 40px;
+		}
+		&__text {
+			font-size: 20px;
+			margin-block-start: 25px;
+		}
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.activities {
+		.container {
+			padding: 0px;
+		}
+		&__wrapper {
+			margin-top: 80px;
+			column-gap: 0px;
+			&>div {
+				padding: 0 10px;
+			}
+		}
+		&__img {
+			margin-top: 60px;
+			height: 250px;
+			object-fit: cover;
+		}
+		&__text {
+			&_fixed {
+				max-inline-size: 556px;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1920px) {
+	.activities {
+		padding-top: 100px;
+		&__img {
+			height: 320px;
+		}
+	}
+}

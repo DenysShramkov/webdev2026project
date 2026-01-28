@@ -1,0 +1,93 @@
+@use '/src/sass/base/variables.scss' as *;
+
+.header {
+	&__top {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__logo {
+		width: 100px;
+		height: 100px;
+	}
+	&__icons {
+		display: flex;
+		align-items: flex-start;
+		column-gap: 15px;
+		a {
+			display: block;
+			color: $dark;
+			span {
+				display: block;
+				width: 20px;
+				height: 20px;
+				font-size: 18px;
+				margin-left: 0;
+				&::before {
+					margin: 0;
+				}
+				&::after {
+					margin: 0;
+				}
+			}
+		}
+	}
+	&__nav {
+		display: none;
+	}
+}
+
+.burger {
+	display: flex;
+	flex-direction: column;
+	height: 23px;
+	row-gap: 10px;
+	padding-right: 35px;
+	span {
+		width: 20px;
+		height: 1px;
+		background: $dark;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.header {
+		&__nav {
+			margin-top: 20px;
+			display: block;
+			ul {
+				display: flex;
+				justify-content: center;
+				gap: 30px;
+				padding: 0;
+				list-style-type: none;
+				a {
+					color: $dark;
+					text-transform: uppercase;
+					text-decoration: none;
+					font-size: 20px;
+					line-height: normal;
+					font-weight: 400;
+					font-style: normal;
+				}
+			}
+		}
+	}
+	.burger {
+		visibility: hidden;
+	}
+}
+
+@media screen and (min-width: 1920px) {
+	.header {
+		&__logo {
+			width: 150px;
+			height: 151px;
+		}
+		&__nav {
+			margin-top: 36px;
+			ul {
+				gap: 60px;
+			}
+		}
+	}
+}

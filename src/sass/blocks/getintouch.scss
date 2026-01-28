@@ -1,3 +1,5 @@
+@use '/src/sass/base/variables.scss' as *;
+
 .getintouch {
 	padding-top: 60px;
 	&__wrapper {
@@ -8,6 +10,76 @@
 	}
 	&__img_float {
 		display: none;
+	}
+	fieldset {
+		border: none;
+		margin: 0 0 8px 0;
+		padding: 0;
+	}
+	&__label {
+		display: block;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 28px;
+		color: $dark;
+	}
+	&__input {
+		width: 100%;
+		height: 48px;
+		padding: 10px 15px;
+		border-radius: 2px;
+		border: 1px solid #e2e1e5;
+		background: #fff;
+		color: $dark;
+		font-size: 14px;
+		line-height: 28px;
+		&::placeholder {
+			color: $ui-disable;
+		}
+		&:focus {
+			border: 1px solid #fff;
+			outline: 1px solid $dark;
+		}
+	}
+	&__textarea {
+		width: 100%;
+		height: 132px;
+		padding: 10px 15px;
+		border-radius: 2px;
+		border: 1px solid #e2e1e5;
+		background: #fff;
+		color: $dark;
+		font-size: 14px;
+		line-height: 28px;
+		resize: none;
+		&::placeholder {
+			color: $ui-disable;
+		}
+		&:focus {
+			border: 1px solid #fff;
+			outline: 1px solid $dark;
+		}
+	}
+	&__checkblock {
+		margin-top: 20px;
+		display: flex;
+		align-items: center;
+		a {
+			color: #a22dc6;
+			text-decoration: none;
+			margin-left: 3px;
+		}
+	}
+	&__checkbox {
+		height: 15px;
+		width: 15px;
+		border: 1px solid $dark;
+		background-color: transparent;
+		border-radius: 2px;
+		margin-right: 15px;
+	}
+	&__btn {
+		margin-top: 20px;
 	}
 }
 
@@ -50,6 +122,16 @@
 			height: 341px;
 			object-fit: cover;
 			box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.25)
+		}
+		&__input {
+			&:hover {
+				border: 1px solid $dark;
+			}
+		}
+		&__textarea {
+			&:hover {
+				border: 1px solid $dark;
+			}
 		}
 	}
 }

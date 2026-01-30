@@ -33,6 +33,7 @@
 		color: $dark;
 		font-size: 14px;
 		line-height: 28px;
+		max-width: 460px;
 		&::placeholder {
 			color: $ui-disable;
 		}
@@ -52,6 +53,7 @@
 		font-size: 14px;
 		line-height: 28px;
 		resize: none;
+		max-width: 460px;
 		&::placeholder {
 			color: $ui-disable;
 		}
@@ -102,6 +104,12 @@
 			bottom: 0;
 			right: 0;
 		}
+		&__textarea {
+			width: 300px;
+		}
+		&__input {
+			width: 300px;
+		}
 	}
 }
 
@@ -151,6 +159,10 @@
 		}
 		&__img {
 			height: 356px;
+		}
+		fieldset {
+			display: flex;
+			justify-content: space-between;
 		}
 	}
 }

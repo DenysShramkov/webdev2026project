@@ -1,0 +1,143 @@
+@use '/src/sass/base/variables.scss' as *;
+
+.footer {
+	background: $dark;
+	margin-top: 56px;
+	padding: 50px 0;
+	&__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		gap: 40px 80px;
+	}
+	&__title {
+		color: $light;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: normal;
+		text-transform: uppercase;
+	}
+	&__text {
+		color: $light;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+		margin-top: 40px;
+	}
+	&__form {
+		margin-top: 40px;
+	}
+	&__input {
+		display: block;
+		width: 100%;
+		background-color: transparent;
+		border: unset;
+		border-bottom: 1px solid $ui-active;
+		padding: 0 0 15px 0;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+		color: $light;
+		&::placeholder {
+			color: $ui-active;
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+		}
+		&:focus {
+			outline: unset;
+		}
+	}
+	&__check-block {
+		margin-top: 20px;
+		display: flex;
+		align-items: center;
+		display: block;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 28px;
+		color: $light;
+		a {
+			color: #a22dc6;
+			text-decoration: none;
+			margin-left: 3px;
+		}
+	}
+	&__checkbox {
+		height: 15px;
+		width: 15px;
+		border: 1px solid $light;
+		background-color: transparent;
+		border-radius: 2px;
+		margin-right: 15px;
+		appearance: none;
+	}
+	&__form-btn {
+		margin-top: 20px;
+	}
+	&__usefullLinks {
+		display: flex;
+		gap: 40px 66px;
+		flex-wrap: wrap;
+	}
+	&__nav {
+		margin-top: 40px;
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		li {
+			margin-top: 20px;
+		}
+		a {
+			color: $light;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+			text-decoration: none;
+		}
+	}
+	&__social {
+		ul {
+			list-style: none;
+			margin: 40px 0 0 0;
+			padding: 0;
+			display: flex;
+			column-gap: 10px;
+		}
+	}
+	&__social-link {
+		span {
+			font-size: 24px;
+			color: $light;
+			&::before {
+				margin: 0;
+			}
+		}
+	}
+	&__copyright {
+		margin-top: 40px;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+		text-align: center;
+		color: $light;
+	}
+}
+
+@media screen and (min-width: 1920px) {
+	.footer {
+		margin-top: 96px;
+		padding-top: 80px;
+		&__copyright {
+			margin-top: 18px;
+		}
+	}
+}

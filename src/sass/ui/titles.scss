@@ -7,7 +7,7 @@
 	font-weight: 400
 }
 
-.title-h2 {
+.title-h2, .title-h1 {
 	@include title;
 	font-size: 32px;
 }
@@ -18,7 +18,7 @@
 }
 
 @media screen and (min-width: 768px) {
-	.title-h2 {
+	.title-h2, .title-h1 {
 		font-size: 36px;
 	}
 	.title-h3 {
@@ -27,7 +27,7 @@
 }
 
 @media screen and (min-width: 768px) {
-	.title-h2 {
+	.title-h2, .title-h1 {
 		font-size: 40px;
 	}
 }

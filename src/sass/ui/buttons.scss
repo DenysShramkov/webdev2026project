@@ -25,6 +25,22 @@
 	}
 }
 
+.btn-read {
+	@include button;
+	width: 145px;
+	height: 32px;
+	transition: 0.5s all, 0s margin;
+	font-size: 14px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	&:focus {
+		border-color: $ceramic;
+		color: $dark;
+	}
+}
+
 .btn-submit {
 	@include button;
 	width: 90px;
@@ -57,6 +73,16 @@
 		}
 	}
 	.btn-send {
+		&:hover {
+			border-color: $ceramic;
+			color: $ceramic;
+		}
+		&:active {
+			border-color: $ceramic;
+			color: $dark;
+		}
+	}
+	.btn-read {
 		&:hover {
 			border-color: $ceramic;
 			color: $ceramic;

@@ -21,5 +21,21 @@
 	text-transform: uppercase;
 	line-height: normal;
 	background: transparent;
+	text-decoration: unset;
 	cursor: pointer;
+}
+
+@mixin angle-decoration {
+	&::before {
+		content: '';
+		position: absolute;
+		display: inline-block;
+		top: 0;
+		left: 0;
+		width: 200px;
+		height: 200px;
+		border-top: 1px solid $dark;
+		border-left: 1px solid $dark;
+		z-index: 1;
+	}
 }

@@ -1,0 +1,33 @@
+@use '/src/sass/base/variables.scss' as *;
+
+.findus {
+	margin-top: 60px;
+	&__wrapper {
+		margin: 60px auto 0 auto;
+		width: 100%;
+		max-width: 663px;
+		height: auto;
+		aspect-ratio: 3.4/2.06;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.findus {
+		&__wrapper {
+			max-width: 663px;
+			height: 500px;
+			aspect-ratio: auto;
+		}
+	}
+}
+
+@media screen and (min-width: 1920px) {
+	.findus {
+		margin-top: 100px;
+		&__wrapper {
+			margin: 80px auto 0 auto;
+			max-width: 801px;
+			height: 604px;
+		}
+	}
+}

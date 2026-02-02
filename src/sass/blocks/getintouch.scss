@@ -1,4 +1,5 @@
 @use '/src/sass/base/variables.scss' as *;
+@use '/src/sass/base/mixins.scss' as *;
 
 .getintouch {
 	padding-top: 60px;
@@ -79,9 +80,36 @@
 		background-color: transparent;
 		border-radius: 2px;
 		margin-right: 15px;
+		appearance: none;
+		cursor: pointer;
+		&:checked {
+			background: 1px center/90% no-repeat url('/src/img/icons/check-mark-black.svg');
+		}
 	}
 	&__btn {
 		margin-top: 20px;
+	}
+	& .just-validate-error-field {
+		border: 1px solid $ui-error;
+		&:focus {
+			outline: 1px solid $ui-error;
+		}
+	}
+	.getintouch__input-block, .textarea-error-message, .checkbox-error-message {
+		position: relative;
+		.just-validate-error-label {
+			color: $light !important;
+			background: $dark;
+			@include validationErrorMessage;
+			&::before {
+				border-bottom: 4px solid $dark;
+			}
+		}
+	}
+	.textarea-error-message, .checkbox-error-message {
+		.just-validate-error-label {
+			top: calc(100% - 1px);
+		}
 	}
 }
 

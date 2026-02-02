@@ -15,7 +15,7 @@
 		/>
 	</head>
 	<body>
-		<section class="about-header">
+		<section class="about">
 			<div class="container">
 				<div class="header">
 					<div class="header__menu">
@@ -50,6 +50,27 @@
 						</ul>
 					</div>
 				</div>
+				<div class="about__wrapper">
+					<h2 class="title-h2">
+						where it all began
+					</h2>
+					<div class="about__grid">
+						<div class="about__img">
+							<img src="/src/img/about/crafts.jpg" alt="pottery">
+						</div>
+						<div class="about__text">
+							<p>
+								Our small pottery workshop began as a simple passion project, rooted in a love for handmade artistry and traditional craftsmanship. What started with a single wheel and a few lumps of clay has grown into a cozy creative space where ideas take shape and stories are told through every piece. Inspired by timeless techniques and the beauty of natural materials, we’ve built a place where both beginners and experienced artists can come together, share their skills, and celebrate the art of pottery. Each creation reflects our journey—shaped by hand, fired with care, and made to be cherished.
+							</p>
+							<p>
+								Over the years, our workshop has become more than just a place to create—it’s a community. Friends, families, and curious visitors gather here to learn, connect, and experience the joy of working with clay. From intimate masterclasses to collaborative projects, we believe in the power of handmade art to bring people together and spark creativity in unexpected ways.
+							</p>
+							<p>
+								Every piece that leaves our studio carries a bit of our story, blending tradition with personal expression. Whether it’s a simple cup or an intricate vase, our ceramics are crafted to be both beautiful and functional, adding warmth and authenticity to any space.
+							</p>
+						</div>
+					</div>
+				</div>
 			</div>
 		</section>
 
@@ -63,7 +84,7 @@
 						<img src="/src/img/form/tea.jpg" alt="Tea set" class="getintouch__img">
 					</div>
 					<div class="getintouch__form pure-u-1 pure-u-lg-1-2 pure-u-xxl-3-5">
-						<form action="#">
+						<form action="#" id="getintouch">
 							<fieldset>
 								<div class="getintouch__input-block">
 									<label class="getintouch__label" for="name">Name</label>
@@ -76,9 +97,11 @@
 							</fieldset>
 							<label class="getintouch__label" for="question">Your question</label>
 							<textarea class="getintouch__textarea" name="Your question" id="question" placeholder="Question" required></textarea>
+							<div class="textarea-error-message"></div>
 							<label for="checkbox" class="getintouch__label getintouch__checkblock">
 								<input class="getintouch__checkbox" type="checkbox" id="checkbox" name="policy checkbox" required>I agree with the <a href="#" target="_blank">terms</a>
 							</label>
+							<div class="checkbox-error-message"></div>
 							<button class="btn-send getintouch__btn">send request</button>
 						</form>
 						<img src="/src/img/form/vase.png" alt="Vase" class="getintouch__img_float">
@@ -104,12 +127,14 @@
 							newsletter
 						</h2>
 						<p class="footer__text">Keep up to date with news and promotions</p>
-						<form action="" class="footer__form">
-							<input placeholder="Enter your e-mail" type="email" class="footer__input" required />
-							<label class="footer__check-block" for="footer__checkbox">
-								<input required class="footer__checkbox" type="checkbox" id="footer__checkbox" />
+						<form action="" class="footer__form" id="footerform">
+							<input placeholder="Enter your e-mail" type="email" id="footeremail" class="footer__input" required />
+							<div class="footeremail-error-message"></div>
+							<label class="footer__check-block" for="footercheckbox">
+								<input required class="footer__checkbox" type="checkbox" id="footercheckbox" />
 								I agree with the <a href="#">terms</a>
 							</label>
+							<div class="footercheckbox-error-message"></div>
 							<button class="btn-submit footer__form-btn">submit</button>
 						</form>
 					</div>

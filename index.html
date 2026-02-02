@@ -93,7 +93,7 @@
 						<img src="/src/img/form/tea.jpg" alt="Tea set" class="getintouch__img">
 					</div>
 					<div class="getintouch__form pure-u-1 pure-u-lg-1-2 pure-u-xxl-3-5">
-						<form action="#">
+						<form action="#" id="getintouch">
 							<fieldset>
 								<div class="getintouch__input-block">
 									<label class="getintouch__label" for="name">Name</label>
@@ -106,9 +106,11 @@
 							</fieldset>
 							<label class="getintouch__label" for="question">Your question</label>
 							<textarea class="getintouch__textarea" name="Your question" id="question" placeholder="Question" required></textarea>
+							<div class="textarea-error-message"></div>
 							<label for="checkbox" class="getintouch__label getintouch__checkblock">
 								<input class="getintouch__checkbox" type="checkbox" id="checkbox" name="policy checkbox" required>I agree with the <a href="#" target="_blank">terms</a>
 							</label>
+							<div class="checkbox-error-message"></div>
 							<button class="btn-send getintouch__btn">send request</button>
 						</form>
 						<img src="/src/img/form/vase.png" alt="Vase" class="getintouch__img_float">
@@ -157,12 +159,14 @@
 							newsletter
 						</h2>
 						<p class="footer__text">Keep up to date with news and promotions</p>
-						<form action="" class="footer__form">
-							<input placeholder="Enter your e-mail" type="email" class="footer__input" required />
-							<label class="footer__check-block" for="footer__checkbox">
-								<input required class="footer__checkbox" type="checkbox" id="footer__checkbox" />
+						<form action="" class="footer__form" id="footerform">
+							<input placeholder="Enter your e-mail" type="email" id="footeremail" class="footer__input" required />
+							<div class="footeremail-error-message"></div>
+							<label class="footer__check-block" for="footercheckbox">
+								<input required class="footer__checkbox" type="checkbox" id="footercheckbox" />
 								I agree with the <a href="#">terms</a>
 							</label>
+							<div class="footercheckbox-error-message"></div>
 							<button class="btn-submit footer__form-btn">submit</button>
 						</form>
 					</div>

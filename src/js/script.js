@@ -3,6 +3,8 @@ import "purecss/build/grids-responsive-min.css" */
 import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
 
+import JustValidate from 'just-validate';
+
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -79,4 +81,76 @@ try {
 	})
 
 	contents.forEach((content, index) => (content.style.display = index === 0 ? "grid" : "none"));
+} catch (e) {}
+
+try {
+	const validatorGetInTouch = new JustValidate('#getintouch');
+	validatorGetInTouch
+		.addField('#name', [
+			{
+				rule: 'required',
+				errorMessage: 'Please fill the name',
+			},
+			{
+				rule: 'minLength',
+				value: 2,
+				errorMessage: 'Name should be longer than 2 letters',
+			},
+		])
+		.addField('#email', [
+			{
+				rule: 'required',
+				errorMessage: 'Please fill an email',
+			},
+			{
+				rule: 'email',
+				errorMessage: 'Please use valid email format',
+			},
+		])
+		.addField('#question', [
+			{
+				rule: 'required',
+				errorMessage: 'Please enter you question',
+			},
+			{
+				rule: 'minLength',
+				value: 5,
+				errorMessage: 'Name should be longer than 5 letters',
+			},
+		], {
+			errorsContainer: '.textarea-error-message',
+		})
+		.addField('#checkbox', [
+			{
+				rule: 'required',
+				errorMessage: 'Please agree with terms',
+			},
+		], {
+			errorsContainer: '.checkbox-error-message',
+		})
+} catch (e) {}
+
+try {
+	const validatorFooter = new JustValidate('#footerform');
+	validatorFooter
+		.addField('#footeremail', [
+			{
+				rule: 'required',
+				errorMessage: 'Please fill an email',
+			},
+			{
+				rule: 'email',
+				errorMessage: 'Please use valid email format',
+			},
+		], {
+			errorsContainer: '.footeremail-error-message',
+		})
+		.addField('#footercheckbox', [
+			{
+				rule: 'required',
+				errorMessage: 'Please agree with terms',
+			},
+		], {
+			errorsContainer: '.footercheckbox-error-message',
+		})
 } catch (e) {}

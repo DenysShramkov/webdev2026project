@@ -161,12 +161,14 @@
 							newsletter
 						</h2>
 						<p class="footer__text">Keep up to date with news and promotions</p>
-						<form action="" class="footer__form">
-							<input placeholder="Enter your e-mail" type="email" class="footer__input" required />
-							<label class="footer__check-block" for="footer__checkbox">
-								<input required class="footer__checkbox" type="checkbox" id="footer__checkbox" />
+						<form action="" class="footer__form" id="footerform">
+							<input placeholder="Enter your e-mail" type="email" id="footeremail" class="footer__input" required />
+							<div class="footeremail-error-message"></div>
+							<label class="footer__check-block" for="footercheckbox">
+								<input required class="footer__checkbox" type="checkbox" id="footercheckbox" />
 								I agree with the <a href="#">terms</a>
 							</label>
+							<div class="footercheckbox-error-message"></div>
 							<button class="btn-submit footer__form-btn">submit</button>
 						</form>
 					</div>

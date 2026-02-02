@@ -1,3 +1,5 @@
+@use '/src/sass/base/animation.scss' as *;
+
 .promo {
 	padding-top: 50px;
 	&__wrapper {
@@ -63,18 +65,8 @@
 			padding-left: 571px;
 		}
 		&__cta {
-			animation-name: slideIn;
-			animation-duration: 2s;
+			animation: slideIn 1s ease-out
 		}
-	}
-}
-
-@keyframes slideIn {
-	from {
-
-	}
-	to {
-		
 	}
 }
 

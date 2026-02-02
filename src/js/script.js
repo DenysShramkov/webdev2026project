@@ -171,5 +171,24 @@ try {
 			},
 		], {
 			errorsContainer: '.footercheckbox-error-message',
+		}).onSuccess((event) => {
+			const form = event.currentTarget;
+			const formData = new FormData(form);
+
+			document.querySelector('.spinner-animation').classList.add('sending');
+
+			fetch('https://httpbin.org/post', {
+				method: "POST",
+				body: formData,
+			})
+				.then((res) => res.json())
+				.then(data => {
+					console.log('Success', data);
+					form.reset();
+					document.querySelector('.spinner-animation').classList.add('success');
+					setTimeout(() => {
+						document.querySelector('.spinner-animation').classList.remove('sending');
+					}, 1000);
+				});
 		})
 } catch (e) {}

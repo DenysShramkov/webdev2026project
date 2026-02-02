@@ -58,6 +58,10 @@
 				color: $ui-error;
 			}
 		}
+		&:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:focus {
+			-webkit-box-shadow: 0 0 0px 40rem $dark inset;
+			-webkit-text-fill-color: $light;
+		}
 	}
 	&__check-block {
 		margin-top: 20px;
